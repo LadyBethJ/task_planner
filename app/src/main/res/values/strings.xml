@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Task Planner</string>
+    <string name="title_todo">To Do</string>
+    <string name="title_done">Done</string>
+    <string name="title_today">Today</string>
+    <string name="title_priority">Prior</string>
+    <string name="title_expired">Expired</string>
+</resources>
