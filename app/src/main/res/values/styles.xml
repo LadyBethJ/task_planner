@@ -18,4 +18,21 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
+    <!-- BottomNavigationView styles -->
+    <style name="TaskPlanner.BottomNavView" parent="Base.TaskPlanner.BottomNavView"/>
+
+    <style name="ThemeOverlay.TaskPlanner.BottomNavView" parent="">
+        <item name="colorPrimary">@color/colorAccent</item>
+    </style>
+
+    <style name="Base.TaskPlanner.BottomNavView" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_nav_view_height</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:theme">@style/ThemeOverlay.TaskPlanner.BottomNavView</item>
+    </style>
+
+
+
 </resources>
