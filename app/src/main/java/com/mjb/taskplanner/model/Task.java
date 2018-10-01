@@ -4,10 +4,14 @@ public class Task {
 
     private String name;
     private String list;
+    private String date;
+    private String hour;
 
-    public Task(String name, String list) {
+    public Task(String name, String list, String date, String hour) {
         this.name = name;
         this.list = list;
+        this.date = date;
+        this.hour = hour;
     }
 
     public String getName() {
@@ -16,5 +20,13 @@ public class Task {
 
     public String getList() {
         return list;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getHour() {
+        return hour;
     }
 }

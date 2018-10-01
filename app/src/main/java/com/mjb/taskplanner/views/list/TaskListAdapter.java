@@ -48,6 +48,8 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.ViewHo
 
         holder.itemName.setText(task.getName());
         holder.itemList.setText(task.getList());
+        holder.itemDate.setText(task.getDate());
+        holder.itemHour.setText(task.getHour());
 
         /*holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +71,8 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.item_name) TextView itemName;
         @BindView(R.id.item_list) TextView itemList;
+        @BindView(R.id.item_date) TextView itemDate;
+        @BindView(R.id.item_hour) TextView itemHour;
         public Task mItem;
 
         public ViewHolder(View view) {

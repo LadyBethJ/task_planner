@@ -79,9 +79,9 @@ public class TaskListFragment extends Fragment implements TaskListView {
     public List<Task> getTasksData() {
         //TODO recuperar las tareas de la BBDD
         List<Task> sampleTask = new ArrayList<>();
-        sampleTask.add(new Task("Comprar detergente","Limpieza"));
-        sampleTask.add(new Task("Comprar patatas","Comida"));
-        sampleTask.add(new Task("Comprar chocolate","Comida"));
+        sampleTask.add(new Task("Comprar detergente","Limpieza", "2018-09-23", "18:35"));
+        sampleTask.add(new Task("Comprar patatas","Comida", "2018-09-23", "18:35"));
+        sampleTask.add(new Task("Comprar chocolate","Comida", "2018-09-23", "18:35"));
         return sampleTask;
     }
 
