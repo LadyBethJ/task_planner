@@ -3,36 +3,49 @@ package com.mjb.taskplanner.views.main;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.mjb.taskplanner.R;
+import com.mjb.taskplanner.views.list.TaskListFragment;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.ButterKnife;
 
-    private TextView mTextMessage;
+public class MainActivity extends AppCompatActivity implements MainView {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
+
+    private MainPresenter presenter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            TaskListFragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.navigation_todo:
-                    mTextMessage.setText(R.string.title_todo);
+                    fragment = TaskListFragment.newInstance();
+                    replaceFragment(fragment);
                     return true;
                 case R.id.navigation_today:
-                    mTextMessage.setText(R.string.title_today);
+                    fragment = TaskListFragment.newInstance();
+                    replaceFragment(fragment);
                     return true;
                 case R.id.navigation_priority:
-                    mTextMessage.setText(R.string.title_priority);
+                    fragment = TaskListFragment.newInstance();
+                    replaceFragment(fragment);
                     return true;
                 case R.id.navigation_done:
-                    mTextMessage.setText(R.string.title_done);
+                    fragment = TaskListFragment.newInstance();
+                    replaceFragment(fragment);
                     return true;
                 case R.id.navigation_expired:
-                    mTextMessage.setText(R.string.title_expired);
+                    fragment = TaskListFragment.newInstance();
+                    replaceFragment(fragment);
                     return true;
             }
             return false;
@@ -44,9 +57,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+        ButterKnife.bind(this);
+
+        presenter = new MainPresenterImpl(this);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        replaceFragment(TaskListFragment.newInstance());
     }
 
+    private void replaceFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.commit();
+    }
 }
