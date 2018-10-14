@@ -5,4 +5,6 @@
     <string name="title_today">Today</string>
     <string name="title_priority">Prior</string>
     <string name="title_expired">Expired</string>
+    <string name="new_task">New task</string>
+    <string name="new_list">New list</string>
 </resources>
