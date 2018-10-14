@@ -46,22 +46,27 @@ public class MainActivity extends AppCompatActivity implements MainView {
                 case R.id.navigation_todo:
                     fragment = TaskListFragment.newInstance();
                     replaceFragment(fragment);
+                    hideFABs();
                     return true;
                 case R.id.navigation_today:
                     fragment = TaskListFragment.newInstance();
                     replaceFragment(fragment);
+                    hideFABs();
                     return true;
                 case R.id.navigation_priority:
                     fragment = TaskListFragment.newInstance();
                     replaceFragment(fragment);
+                    hideFABs();
                     return true;
                 case R.id.navigation_done:
                     fragment = TaskListFragment.newInstance();
                     replaceFragment(fragment);
+                    hideFABs();
                     return true;
                 case R.id.navigation_expired:
                     fragment = TaskListFragment.newInstance();
                     replaceFragment(fragment);
+                    hideFABs();
                     return true;
             }
             return false;
@@ -120,5 +125,10 @@ public class MainActivity extends AppCompatActivity implements MainView {
                 fabView.setVisibility(View.GONE);
                 break;
         }
+    }
+
+    private void hideFABs() {
+        fabNewListBtn.setVisibility(View.GONE);
+        fabNewTaskBtn.setVisibility(View.GONE);
     }
 }
