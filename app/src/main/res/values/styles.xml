@@ -29,8 +29,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/bottom_nav_view_height</item>
         <item name="android:layout_gravity">bottom</item>
-        <item name="android:background">@color/tabbarIconColor</item>
-        <item name="itemBackground">@android:color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="itemBackground">@color/white</item>
+        <item name="itemIconTint">@color/satori_blue</item>
+        <item name="itemTextColor">@color/satori_blue</item>
         <item name="android:theme">@style/ThemeOverlay.TaskPlanner.BottomNavView</item>
     </style>
 

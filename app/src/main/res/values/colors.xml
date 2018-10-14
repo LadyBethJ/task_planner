@@ -2,8 +2,14 @@
 <resources>
     <color name="colorPrimary">#E0E0E0</color>
     <color name="colorPrimaryDark">#FBB8AC</color>
-    <color name="colorAccent">#FEDBD0</color>
-    <color name="tabbarIconColor">#f98e7b</color>
-    <color name="textColorPrimary">#565656</color>
-    <color name="toolbarIconColor">@color/textColorPrimary</color>
+    <color name="colorAccent">@color/satori_turquoise</color>
+    <color name="textColorPrimary">@color/satori_blue</color>
+    <color name="toolbarIconColor">@color/satori_blue</color>
+    <!-- PALETA COLORES -->
+    <color name="satori_blue">#1d1145</color>
+    <color name="satori_turquoise">#0db5bb</color>
+    <color name="satori_peach">#f1a49e</color>
+    <color name="satori_pink">#e66c8a</color>
+    <!-- OTROS COLORES -->
+    <color name="white">#ffffff</color>
 </resources>
