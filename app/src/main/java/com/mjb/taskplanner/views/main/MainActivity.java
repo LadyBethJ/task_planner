@@ -6,12 +6,14 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.mjb.taskplanner.R;
 import com.mjb.taskplanner.views.list.TaskListFragment;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements MainView {
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private MainPresenter presenter;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -61,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
         presenter = new MainPresenterImpl(this);
 
+        setSupportActionBar(toolbar);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -71,5 +77,10 @@ public class MainActivity extends AppCompatActivity implements MainView {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void updateToolbarTitle(int titleId) {
+        toolbar.setTitle(titleId);
     }
 }
