@@ -7,7 +7,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="toolbarStyle">@style/Widget.Shrine.Toolbar</item>
     </style>
