@@ -30,13 +30,39 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_new_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_close_white"
+        android:theme="@style/SecondaryFloatingButton"
+        app:layout_constraintBottom_toTopOf="@+id/fab_new_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:fabSize="mini"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_new_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_close_white"
+        android:theme="@style/SecondaryFloatingButton"
+        app:layout_constraintBottom_toTopOf="@+id/fab_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:fabSize="mini"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:src="@drawable/ic_add_white"
-        android:theme="@style/FloatingButton"
+        android:theme="@style/MainFloatingButton"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -52,9 +52,13 @@
         <item name="android:elevation">4dp</item>
     </style>
 
-    <!-- Floating button style -->
-    <style name="FloatingButton" parent="Theme.AppCompat.Light">
+    <!-- Floating buttons style -->
+    <style name="MainFloatingButton" parent="Theme.AppCompat.Light">
         <item name="colorAccent">@color/satori_peach</item>
+    </style>
+
+    <style name="SecondaryFloatingButton" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/satori_turquoise</item>
     </style>
 
 </resources>

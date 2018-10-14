@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.mjb.taskplanner.R;
@@ -28,7 +29,11 @@ public class MainActivity extends AppCompatActivity implements MainView {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.fab_btn)
-    FloatingActionButton fabButton;
+    FloatingActionButton fabBtn;
+    @BindView(R.id.fab_new_task)
+    FloatingActionButton fabNewTaskBtn;
+    @BindView(R.id.fab_new_list)
+    FloatingActionButton fabNewListBtn;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -86,12 +91,41 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
     @OnClick(R.id.fab_btn)
-    public void fabClicked(){
+    public void fabMainClicked(){
         Log.i(TAG, "Pulsado FAB button");
+        updateFABNewTaskVisibility(fabNewTaskBtn.getVisibility());
+        updateFABNewListVisibility(fabNewListBtn.getVisibility());
+    }
+
+    @OnClick({R.id.fab_new_task, R.id.fab_new_list})
+    public void fabOptionClicked(){
+        Log.i(TAG, "Pulsado FAB option button");
     }
 
     @Override
     public void updateToolbarTitle(int titleId) {
         toolbar.setTitle(titleId);
+    }
+
+    private void updateFABNewTaskVisibility(int visibility){
+        switch (visibility){
+            case View.GONE:
+                fabNewTaskBtn.setVisibility(View.VISIBLE);
+                break;
+            case View.VISIBLE:
+                fabNewTaskBtn.setVisibility(View.GONE);
+                break;
+        }
+    }
+
+    private void updateFABNewListVisibility(int visibility){
+        switch (visibility){
+            case View.GONE:
+                fabNewListBtn.setVisibility(View.VISIBLE);
+                break;
+            case View.VISIBLE:
+                fabNewListBtn.setVisibility(View.GONE);
+                break;
+        }
     }
 }
