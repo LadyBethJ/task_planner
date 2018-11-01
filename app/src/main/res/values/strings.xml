@@ -7,4 +7,5 @@
     <string name="title_expired">Expired</string>
     <string name="new_task">New task</string>
     <string name="new_list">New list</string>
+    <string name="task_details">Task\'s Details</string>
 </resources>
