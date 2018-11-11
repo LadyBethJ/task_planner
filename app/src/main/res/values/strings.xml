@@ -8,4 +8,14 @@
     <string name="new_task">New task</string>
     <string name="new_list">New list</string>
     <string name="task_details">Task\'s Details</string>
+
+    <string name="task_name">Name</string>
+    <string name="task_list">List</string>
+    <string name="task_date">Date</string>
+    <string name="task_hour">Hour</string>
+    <string name="task_prior">Priority</string>
+    <string name="task_notes">Notes</string>
+    <string name="task_father">Father</string>
+    <string name="task_photo">Photo</string>
+
 </resources>
