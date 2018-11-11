@@ -44,22 +44,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     <TextView
-                        android:id="@+id/item_name"
+                        android:id="@+id/task_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/margin_16dp"
                         android:textAppearance="?attr/textAppearanceListItem"
                         tools:text="Comprar café" />
-
                     <TextView
-                        android:id="@+id/item_list"
+                        android:id="@+id/task_done"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/margin_16dp"
                         android:textAppearance="?attr/textAppearanceListItem"
-                        tools:text="Hogar" />
+                        tools:text="Hecho" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -68,19 +66,137 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/item_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/margin_16dp"
-                        android:text="2018-11-05"
+                        android:text="@string/task_date"
                         android:textAppearance="?attr/textAppearanceListItem" />
+                    <TextView
+                        android:id="@+id/task_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        tools:text="2018-11-30"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/item_hour"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/margin_16dp"
-                        android:text="14:09"
+                        android:text="@string/task_hour"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                    <TextView
+                        android:id="@+id/task_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        tools:text="14:09"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:text="@string/task_prior"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                    <TextView
+                        android:id="@+id/task_prior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        tools:text="media"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:text="@string/task_list"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                    <TextView
+                        android:id="@+id/task_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        tools:text="Hogar"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:text="@string/task_father"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                    <TextView
+                        android:id="@+id/task_father"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        tools:text="sin padre"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:text="@string/task_notes"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                    <TextView
+                        android:id="@+id/task_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        tools:text="érase una vez que se era una tarea que no tenía tarea padre y que era felizmente independiente"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:text="@string/task_photo"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+                    <TextView
+                        android:id="@+id/task_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        tools:text="uri de la foto"
                         android:textAppearance="?attr/textAppearanceListItem" />
                 </LinearLayout>
             </LinearLayout>
