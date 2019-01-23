@@ -18,4 +18,14 @@
     <string name="task_father">Father</string>
     <string name="task_photo">Photo</string>
 
+    <string name="no_name">No Name</string>
+    <string name="no_list">No List</string>
+    <string name="no_date">No Date</string>
+    <string name="no_hour">No Hour</string>
+    <string name="no_prior">No Priority</string>
+    <string name="no_notes">No Notes</string>
+    <string name="no_father">No Father</string>
+    <string name="no_photo">No Photo</string>
+    <string name="not_done">Not done</string>
+
 </resources>
